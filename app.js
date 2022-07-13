@@ -30,8 +30,6 @@ reset.addEventListener("click", function () {
 })
 
 
-
-
 container.addEventListener("mouseover", function(e) {
     if(e.target !== container){
         e.target.style.backgroundColor = "white";
