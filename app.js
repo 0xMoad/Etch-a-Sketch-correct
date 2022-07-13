@@ -1,7 +1,7 @@
 let container = document.getElementById("container");
 let button = document.getElementById("button");
 let reset = document.getElementById("reset");
-let cell = document.createElement("div");
+
 
 
 
@@ -32,11 +32,12 @@ reset.addEventListener("click", function () {
 
 
 
-
-cell.addEventListener("mouseover", function(e) {
-     e.target.style.backgroundColor = "white";
-   e.target.style.border = "0.1px solid black";
- })
+container.addEventListener("mouseover", function(e) {
+    if(e.target !== container){
+        e.target.style.backgroundColor = "white";
+        e.target.style.border = "1px solid black"
+    }
+})
 
 
 
