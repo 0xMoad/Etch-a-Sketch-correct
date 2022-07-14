@@ -40,29 +40,33 @@ reset.addEventListener("click", function () {
   })
 
  */
+// Execute 'start' function on mousedown anywhere in document.
 document.addEventListener("mousedown", start);
+
+// Execute 'stop' function on mouseup anywhere in document.
 document.addEventListener("mouseup", stop);
- 
-  function start(event) {
- // forEach event listner for Hover on your grid items
- let divs = document.querySelectorAll(".cell")
- divs.forEach((div) => {
-    div.addEventListener("mouseover", function(e){
-    this.style.backgroundColor = "white";
-    this.style.border = "1px solid black"
-    console.log("this works")
+
+// Get nodelist of elements to apply styles to
+// Apply an event listener to each one of them
+function start(event) {
+    let divs = document.querySelectorAll(".cell")
+    divs.forEach((div) => {
+        div.addEventListener("mousemove", function(e){
+            this.style.backgroundColor = "white";
+            this.style.border = "1px solid black"
+            console.log("start works")
+        })
     })
-    
+}
 
- })
- }
- function stop() {
-   document.removeEventListener("mouseover");
-   //remove the hover event listenre when the mouse is up
- }
-
-
-
+// Get nodelist of elements to remove event listener from
+// clone the nodes as cloning does not copy the listener
+function stop() {
+    let divs = document.querySelectorAll(".cell")
+    divs.forEach((div) => {
+        div.replaceWith(div.cloneNode(true));
+    })
+}
 
 
 
