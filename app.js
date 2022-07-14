@@ -16,6 +16,7 @@ const grid = () => {
             cell.classList.add("cell");
             container.appendChild(cell); 
             button.style.display = "none"
+            
  } })         
     } 
 
@@ -30,12 +31,36 @@ reset.addEventListener("click", function () {
 })
 
 
-container.addEventListener("mouseover", function(e) {
-    if(e.target !== container){
-        e.target.style.backgroundColor = "white";
-        e.target.style.border = "1px solid black"
-    }
-})
+  /* container.addEventListener("mouseover", function(e) {
+    
+     if(e.target !== container){
+          e.target.style.backgroundColor = "white";
+          e.target.style.border = "1px solid black"
+      }  
+  })
+
+ */
+document.addEventListener("mousedown", start);
+document.addEventListener("mouseup", stop);
+ 
+  function start(event) {
+ // forEach event listner for Hover on your grid items
+ let divs = document.querySelectorAll(".cell")
+ divs.forEach((div) => {
+    div.addEventListener("mouseover", function(e){
+    this.style.backgroundColor = "white";
+    this.style.border = "1px solid black"
+    console.log("this works")
+    })
+    
+
+ })
+ }
+ function stop() {
+   document.removeEventListener("mouseover");
+   //remove the hover event listenre when the mouse is up
+ }
+
 
 
 
@@ -55,3 +80,4 @@ container.addEventListener("mouseover", function(e) {
 
 grid()
 squares()
+
