@@ -18,7 +18,9 @@ const grid = () => {
             let cell = document.createElement("div");
             cell.classList.add("cell");
             container.appendChild(cell); 
-            button.style.display = "none"
+            
+             button.disabled = true;
+             button.innerHTML = "RESET TO SIZE AGAIN"
             
  } })         
     } 
@@ -29,7 +31,7 @@ reset.addEventListener("click", function () {
     container.innerHTML = ""
     button.innerHTML = "NUMBER OF SQUARES"
     console.log("reset clicked");
-    button.style.display = "inline"
+    button.disabled = false;
     
 })
 
