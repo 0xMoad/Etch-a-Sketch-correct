@@ -2,7 +2,7 @@ let container = document.getElementById("container");
 let button = document.getElementById("button");
 let reset = document.getElementById("reset");
 let color  = document.getElementById("color");
-let backgroundColor = "red"
+let bgColor = "red"
 
 
 color.addEventListener("change", (e) => (bgColor = e.target.value));
@@ -34,17 +34,6 @@ reset.addEventListener("click", function () {
     button.disabled = false;
     
 })
-
-
-  /* container.addEventListener("mouseover", function(e) {
-    
-     if(e.target !== container){
-          e.target.style.backgroundColor = "white";
-          e.target.style.border = "1px solid black"
-      }  
-  })
-
- */
 // Execute 'start' function on mousedown anywhere in document.
 document.addEventListener("mousedown", start);
 

@@ -2,34 +2,36 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: 🖍;
+    background: url("fototapeter-smiley-cool.jpg.jpg");
+    padding: 0;
 }
 
 #container {
     width: 400px;
     height: 400px;
-    position: relative;
-    left: 240px;
-    
+    border-right: 1px solid black;
     display: grid;
     margin: auto;
     margin-top: 20px;
+    padding: none;
+    border: 7px solid gray;
+    border-bottom: 10px solid gray;
+    border-radius: 10px;
+    
       
 }
 
 .cell {
-    border: 1px solid orange;
+    border: 1px solid gray;
     width: auto;
-    background-color: black; 
-   position: relative;
-   right: 200px;
+    background-color: white; 
+    
 }
 
 #button {
     width: 300px;
     height: 50px;
-    position: relative;
-    left: 78px;
+
     color: orange;
     font-size: 22px;
     box-shadow: 5px 10px #888888;
@@ -39,8 +41,7 @@ html {
 #reset {
     width: 300px;
     height: 50px;
-    position: relative;
-    left: 78px;
+    
     color: orange;
     font-size: 22px;
     box-shadow: 5px 10px #888888;
@@ -49,8 +50,7 @@ html {
 .button {
     width: 300px;
     height: 50px;
-    position: relative;
-    left: 78px;
+
     color: orange;
     font-size: 22px;
     box-shadow: 5px 10px #888888;
@@ -90,13 +90,33 @@ html {
 #color {
   width: 200px;
   height: 50px;
-  position: relative;
-  left: 78px;
-  top: 11.5px;
+  /* position: relative;
+  left: 65px; */
   color: orange;
   font-size: 22px;
   box-shadow: 5px 10px #888888;
+
 }
 
 
- 
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+  
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px
+}
