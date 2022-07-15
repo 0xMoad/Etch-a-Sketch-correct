@@ -1,8 +1,11 @@
 let container = document.getElementById("container");
 let button = document.getElementById("button");
 let reset = document.getElementById("reset");
+let color  = document.getElementById("color");
+let backgroundColor = "red"
 
 
+color.addEventListener("change", (e) => (bgColor = e.target.value));
 
 
 const grid = () => {
@@ -52,7 +55,7 @@ function start(event) {
     let divs = document.querySelectorAll(".cell")
     divs.forEach((div) => {
         div.addEventListener("mousemove", function(e){
-            this.style.backgroundColor = "white";
+            this.style.backgroundColor = `${bgColor}`;;
             this.style.border = "1px solid black"
             console.log("start works")
         })
