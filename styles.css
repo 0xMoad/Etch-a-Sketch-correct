@@ -2,9 +2,11 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("fototapeter-smiley-cool.jpg.jpg");
     padding: 0;
+    cursor: url("pencil_270f-fe0f.png")
 }
+
+
 
 #container {
     width: 400px;
@@ -17,7 +19,7 @@ html {
     border: 7px solid gray;
     border-bottom: 10px solid gray;
     border-radius: 10px;
-    
+ 
       
 }
 
@@ -119,4 +121,27 @@ input[type="color"]::-webkit-color-swatch {
   display: flex;
   justify-content: center;
   gap: 10px
+  
+}
+
+
+
+#eraser {
+  width: 150px;
+  height: 150px;
+  background-color: black;
+  margin-top: 20px;
+  box-shadow: 5px 10px #888888;
+  color: white;
+  position: absolute;
+  left: 370px;
+  top: 100px;
+  font-size: 22px;
+
+}
+
+#eraser:hover {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
